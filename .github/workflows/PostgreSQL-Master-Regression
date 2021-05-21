@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt purge postgresql-client-common postgresql-common postgresql postgresql*
+          sudo apt purge postgresql-client-common postgresql-common postgresql postgresql* libxml2-utils
           sudo apt-get install libreadline6-dev systemtap-sdt-dev zlib1g-dev libssl-dev libpam0g-dev python-dev bison flex libipc-run-perl -y
           sudo rm -rf /var/lib/postgresql/
           sudo rm -rf /var/log/postgresql/
