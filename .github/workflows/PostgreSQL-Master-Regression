@@ -38,12 +38,6 @@ jobs:
           export PATH="/opt/pgsql/bin:$PATH"
           /opt/pgsql/bin/initdb -D /opt/pgsql/data
           /opt/pgsql/bin/pg_ctl -D /opt/pgsql/data -l logfile start
-      - name: Build pg_stat_monitor
-        run: |
-          export PATH="/opt/pgsql/bin:$PATH"
-          sudo cp /opt/pgsql/bin/pg_config /usr/bin
-          make USE_PGXS=1
-          make USE_PGXS=1 install
 
       - name: Start regression
         run: |
